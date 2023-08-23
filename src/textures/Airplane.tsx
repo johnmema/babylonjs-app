@@ -41,6 +41,15 @@ const FlyingBoxScene = () => {
       );
 
       // Create a flying box
+      BABYLON.SceneLoader.ImportMesh(
+        "",
+        "https://raw.githubusercontent.com/johnmema/babylonjs-app/master/src/models/",
+        "aerobatic_plane.glb",
+        scene
+      );
+      engine.runRenderLoop(() => {
+        scene.render();
+      });
 
       return scene;
     };
